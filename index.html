@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>添加好友</title>
+    <style>
+        body {
+            font-family: "Microsoft YaHei", sans-serif;
+            background-color: #f5f5f5;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+        .container {
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+        }
+        h1 { color: #1aad19; }
+        img {
+            width: 200px;
+            height: 200px;
+            margin: 20px 0;
+            border: 1px solid #eee;
+        }
+        .copy-btn {
+            background-color: #1aad19;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>扫码添加好友</h1>
+        <!-- 你的二维码图片地址 -->
+        <img src="https://test.fukit.cn/autoupload/fr/5Q8_oJZwXloqAjSlIBOkV7mm5-XLX6yG02WSYN9JybWyl5f0KlZfm6UsKj-HyTuv/20260415/y2oj/1268X1725/yf186588.jpg/webp" alt="微信二维码">
+        <p>微信号：<strong>yf186588</strong></p>
+        <button class="copy-btn" onclick="copyWeChat()">点击复制微信号</button>
+    </div>
+
+    <script>
+        function copyWeChat() {
+            const weChatId = "yf186588";
+            navigator.clipboard.writeText(weChatId).then(() => {
+                alert("微信号 " + weChatId + " 已复制到剪贴板！");
+            }, err => {
+                console.error('复制失败: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
